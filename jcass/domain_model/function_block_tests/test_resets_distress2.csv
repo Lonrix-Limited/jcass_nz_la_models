@@ -1,0 +1,19 @@
+﻿parameter,value,expected
+this_treatment_cat ,Resurfacing,
+par_surf_exp_life,12.58,
+f_flush_probability,0,
+f_scabb_probability,0,
+f_lt_cracks_probability,0,
+f_mesh_cracks_probability,0,
+f_shove_probability,0,
+f_poth_probability,0.19,
+par_flushing_pct,0,
+par_scabbing_pct,0,
+par_lt_cracks_pct,0,
+par_mesh_cracks_pct,12,
+par_shoving_pct,0,
+par_potholes_pct,15.82,
+f_reset_mesh_cracks_fully,,0
+par_mesh_cracks_aadi,,1
+par_mesh_cracks_init,,6
+par_mesh_cracks_t100,,70

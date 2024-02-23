@@ -1,0 +1,5 @@
+"parameter","value","expected"
+"adt",567,NA
+"heavy_perc",4.5,NA
+"par_adt",NA,567
+"par_heavy",NA,25.515

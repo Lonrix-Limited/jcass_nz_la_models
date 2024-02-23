@@ -1,0 +1,18 @@
+﻿parameter,value,expected
+this_treatment_cat ,Rehab,
+par_surf_exp_life,12.58,
+f_flush_probability,0,
+f_scabb_probability,0,
+f_lt_cracks_probability,0,
+f_mesh_cracks_probability,0,
+f_shove_probability,0,
+f_poth_probability,0.19,
+par_flushing_pct,0,
+par_scabbing_pct,0,
+par_lt_cracks_pct,0,
+par_mesh_cracks_pct,0,
+par_shoving_pct,0,
+par_potholes_pct,15.82,
+f_reset_potholes_fully,,1
+f_poth_aadi_exp,,10.1898
+f_reset_potholes_aadi,,10.1898

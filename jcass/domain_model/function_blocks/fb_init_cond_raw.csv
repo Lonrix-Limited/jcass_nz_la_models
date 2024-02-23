@@ -1,0 +1,9 @@
+﻿filter,function_type,function_key,setup_code,assign_to_key
+naasra,value_copy,f_init_naasra_raw,naasra_85,par_naasra
+rut,max,f_init_rut_raw,rut_lwpmean_85|rut_rwpmean_85 : FALSE,par_rut
+flushing,value_copy,f_init_flushing_raw,pct_flush,par_flushing_pct
+scabbing,value_copy,f_init_scabbing_raw,pct_scabb,par_scabbing_pct
+lt_cracks,value_copy,f_init_lt_cracks_raw,pct_lt_crax,par_lt_cracks_pct
+mesh_cracks,value_copy,f_init_mesh_cracks_raw,pct_allig,par_mesh_cracks_pct
+shoving,value_copy,f_init_shoving_raw,pct_shove,par_shoving_pct
+potholes,value_copy,f_init_potholes_raw,pct_poth,par_potholes_pct

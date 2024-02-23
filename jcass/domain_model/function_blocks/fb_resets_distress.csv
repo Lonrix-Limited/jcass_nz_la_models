@@ -1,0 +1,31 @@
+﻿filter,function_type,function_key,setup_code,assign_to_key
+all,additive_equation,f_flush_aadi_exp,par_surf_exp_life * 1min(f_flush_probability),par_flushing_aadi
+all,additive_equation,f_flush_t100_exp,f_flush_t100_max * 1min(f_flush_probability),par_flushing_t100
+all,value_copy,f_reset_flushing_init,f_flush_init_exp,par_flushing_init
+all,additive_equation,f_scabb_aadi_exp,par_surf_exp_life * 1min(f_scabb_probability),par_scabbing_aadi
+all,additive_equation,f_scabb_t100_exp,f_scabb_t100_max * 1min(f_scabb_probability),par_scabbing_t100
+all,value_copy,f_reset_scabbing_init,f_scabb_init_exp,par_scabbing_init
+all,additive_equation,f_lt_cracks_aadi_exp,par_surf_exp_life * 1min(f_lt_cracks_probability),
+all,additive_equation,f_lt_cracks_t100_exp,f_lt_cracks_t100_max * 1min(f_lt_cracks_probability),
+all,additive_equation,f_mesh_cracks_aadi_exp,par_surf_exp_life * 1min(f_mesh_cracks_probability),
+all,additive_equation,f_mesh_cracks_t100_exp,f_mesh_cracks_t100_max * 1min(f_mesh_cracks_probability),
+all,additive_equation,f_shove_aadi_exp,par_surf_exp_life * 1min(f_shove_probability),
+all,additive_equation,f_shove_t100_exp,f_shove_t100_max * 1min(f_shove_probability),
+all,additive_equation,f_poth_aadi_exp,par_surf_exp_life * 1min(f_poth_probability),
+all,additive_equation,f_poth_t100_exp,f_poth_t100_max * 1min(f_poth_probability),
+all,or_compounded_equality,f_reset_lt_cracks_fully,t: this_treatment_cat contains rehab OR n: f_pre_reset_lt_cracks < 5,
+all,if_else,f_reset_lt_cracks_aadi,n: f_reset_lt_cracks_fully = 1 ~ f_lt_cracks_aadi_exp ~ 1,par_lt_cracks_aadi
+all,if_else,f_reset_lt_cracks_init,n: f_reset_lt_cracks_fully = 1 ~ f_lt_cracks_init_exp ~ eq(0.5 * par_lt_cracks_pct),par_lt_cracks_init
+all,if_else,f_reset_lt_cracks_t100,n: f_reset_lt_cracks_fully = 1 ~ f_lt_cracks_t100_exp ~ eq(0.7* f_lt_cracks_t100_exp),par_lt_cracks_t100
+all,or_compounded_equality,f_reset_mesh_cracks_fully,t: this_treatment_cat contains rehab OR n:f_pre_reset_mesh_cracks < 5,
+all,if_else,f_reset_mesh_cracks_aadi,n: f_reset_mesh_cracks_fully = 1 ~ f_mesh_cracks_aadi_exp ~ 1,par_mesh_cracks_aadi
+all,if_else,f_reset_mesh_cracks_init,n: f_reset_mesh_cracks_fully = 1 ~ f_mesh_cracks_init_exp ~ eq(0.5 * f_pre_reset_mesh_cracks),par_mesh_cracks_init
+all,if_else,f_reset_mesh_cracks_t100,n: f_reset_mesh_cracks_fully = 1 ~ f_mesh_cracks_t100_exp ~ eq(0.7* f_mesh_cracks_t100_exp),par_mesh_cracks_t100
+all,or_compounded_equality,f_reset_shoving_fully,t: this_treatment_cat contains rehab OR n: f_pre_reset_shoving < 3,
+all,if_else,f_reset_shoving_aadi,n: f_reset_shoving_fully = 1 ~ f_shove_aadi_exp ~ 1,par_shove_aadi
+all,if_else,f_reset_shoving_init,n: f_reset_shoving_fully = 1 ~ f_shove_init_exp ~ eq(0.5 * f_pre_reset_shoving),par_shove_init
+all,if_else,f_reset_shoving_t100,n: f_reset_shoving_fully = 1 ~ f_shove_t100_exp ~ eq(0.7* f_shove_t100_exp),par_shove_t100
+all,or_compounded_equality,f_reset_potholes_fully,t: this_treatment_cat contains rehab OR n: f_pre_reset_potholes < 1,
+all,if_else,f_reset_potholes_aadi,n: f_reset_potholes_fully = 1 ~ f_poth_aadi_exp ~ 1.222,par_poth_aadi
+all,if_else,f_reset_potholes_init,n: f_reset_potholes_fully = 1 ~ f_poth_init_exp ~ eq(0.5 *  f_pre_reset_potholes),par_poth_init
+all,if_else,f_reset_porholes_t100,n: f_reset_potholes_fully = 1 ~ f_poth_t100_exp ~ eq(0.7* f_poth_t100_exp),par_poth_t100

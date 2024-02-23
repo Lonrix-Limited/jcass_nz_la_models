@@ -1,0 +1,3 @@
+﻿filter,function_type,function_key,setup_code,assign_to_key
+pavement,min,f_struc_remlife,msd_remlife_lwp | msd_remlife_rwp : TRUE : -1,par_struc_remlife
+pavement,date_to_age,f_pave_age,pave_date:yyyy-mm-dd : 1 : 2023-12-28 : years,par_pav_age

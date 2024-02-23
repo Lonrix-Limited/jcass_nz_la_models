@@ -1,0 +1,15 @@
+﻿filter,function_type,function_key,setup_code,assign_to_key,comment
+situation,concatenate,f_reset_situation,urban_rural|surf_class : _,,"In this case we are getting the reset for the current surfacing, so use 'surf_class'"
+last_treat,equality,f_is_rehab,n: par_pav_age < 5,,We are not sure if last treatment was a rehab. Estimate this to be the case if pavement age is less than 5 years
+naasra,lookup,f_reset_naasra_exceed_thresh,reset_exceed_thresh_naasra : f_reset_situation,,
+naasra,lookup,f_reset_naasra_improv_fact,reset_perc_improv_facts_naasra : f_reset_situation,,
+naasra,if_else,f_reset_naasra_exeedance,n: par_naasra <=f_reset_naasra_exceed_thresh ~ 0 ~ eq(par_naasra + -1* f_reset_naasra_exceed_thresh),,
+naasra,additive_equation,f_reset_resurf_naasra,f_reset_naasra_exceed_thresh + f_reset_naasra_exeedance * 1min(f_reset_naasra_improv_fact),,
+naasra,lookup,f_reset_rehab_naasra,rehab_resets_naasra : f_reset_situation,,
+naasra,if_else,f_reset_naasra,n: f_is_rehab = 1 ~ f_reset_rehab_naasra ~ f_reset_resurf_naasra,par_naasra,
+rut,lookup,f_reset_rut_exceed_thresh,reset_exceed_thresh_rut : f_reset_situation,,
+rut,lookup,f_reset_rut_improv_fact,reset_perc_improv_facts_rut : f_reset_situation,,
+rut,if_else,f_reset_rut_exeedance,n: par_rut <=f_reset_rut_exceed_thresh ~ 0 ~ eq(par_rut + -1* f_reset_rut_exceed_thresh),,
+rut,additive_equation,f_reset_resurf_rut,f_reset_rut_exceed_thresh + f_reset_rut_exeedance * 1min(f_reset_rut_improv_fact),,
+rut,lookup,f_reset_rehab_rut,rehab_resets_rut : f_reset_situation,,
+rut,if_else,f_reset_rut,n: f_is_rehab = 1 ~ f_reset_rehab_rut ~ f_reset_resurf_rut,par_rut,

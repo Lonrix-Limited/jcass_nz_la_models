@@ -1,0 +1,22 @@
+﻿parameter,value,expected
+f_is_seal,0,
+par_surf_thick,56,
+f_is_urban,0,
+par_adt,334,
+ heavy_perc,7.7,
+par_pav_age,22.3,
+par_flushing_pct,0,
+par_scabbing_pct,6,
+par_lt_cracks_pct,0,
+par_mesh_cracks_pct,13.3,
+par_shoving_pct,1.8,
+par_potholes_pct,0.5,
+par_rut,6.8,
+f_flush_probability,,0.03006
+f_scabb_probability,,0.07280
+f_lt_cracks_probability,,0.18384
+f_mesh_cracks_probability,,0.34898
+f_shove_probability,,0.08556
+f_poth_probability,,0.12017
+f_rut_proba,,0.409245451
+f_naasra_proba,,0.175742419

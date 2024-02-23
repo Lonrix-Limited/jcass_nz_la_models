@@ -1,0 +1,37 @@
+"...1","1...2","1...3","11","1...5","9.1644011400347374","4","0...8","0...9","0...10","0...11","0...12","0...13","0...14","2","...16"
+"distress","(Intercept)","surf_classseal","surf_thick","urban_ruralU","ln(adt)","heavy_perc","pave_age","pct_poth","pct_flush","pct_shove","pct_allig","pct_lt_crax","pct_scabb","rutting",NA
+"pct_flush","-5.2896262076682099","2.3356277426735801","-1.30749069574446E-3","-0.58009822727101501","0.397892173697379","-3.0952496489999801E-2","-8.29682871011596E-3","0","0","0","0","0","0","0","logit(-5.2896 + 2.3356*f_is_seal + -0.0013 * par_surf_thick + -0.5801 * f_is_urban + 0.3979 * ln(par_adt) + -0.031 * heavy_perc + -0.0083 * par_pav_age)"
+"pct_scabb","-3.5533645418869702","2.0198079068068702","4.6905162233490099E-3","0.59694441571374302","8.9142635096938899E-2","1.08703859301443E-2","6.4782686875273898E-3","0","0","0","0","0","0","0","logit(-3.5534 + 2.0198*f_is_seal + 0.0047 * par_surf_thick + 0.5969 * f_is_urban + 0.0891 * ln(par_adt) + 0.0109 * heavy_perc + 0.0065 * par_pav_age)"
+"pct_lt_crax","-2.7193349819809298","-1.0772347714760999","-1.10635065669396E-2","1.00970274762561","0.29899012719471002","1.49219647856515E-2","-1.7920071396721301E-4","0","0","0","0","0","0","0","logit(-2.7193 + -1.0772*f_is_seal + -0.0111 * par_surf_thick + 1.0097 * f_is_urban + 0.299 * ln(par_adt) + 0.0149 * heavy_perc + -0.0002 * par_pav_age)"
+"pct_allig","-4.6498945333922403","-6.1679377901317299E-2","1.16093726645426E-2","-0.391647882804881","0.486497046663804","2.35084359216618E-2","8.2679686550250694E-3","0","0","0","0","2.0300570161039099E-2","3.0623413178523198E-2","0","logit(-4.6499 + -0.0617*f_is_seal + 0.0116 * par_surf_thick + -0.3916 * f_is_urban + 0.4865 * ln(par_adt) + 0.0235 * heavy_perc + 0.0083 * par_pav_age + 0.0203* par_pct_lt_cracks + 0.0306* par_pct_scabbing)"
+"pct_shove","-5.0260079172902703","0.88232758597882699","-4.4625474922691801E-3","-0.291831446292797","0.37746870165905999","3.0679232890743402E-3","3.8211949103136699E-3","0","0","0","2.6982780188569699E-2","-3.96284616760574E-3","4.1372752605070798E-2","0","logit(-5.026 + 0.8823*f_is_seal + -0.0045 * par_surf_thick + -0.2918 * f_is_urban + 0.3775 * ln(par_adt) + 0.0031 * heavy_perc + 0.0038 * par_pav_age + 0 * par_pct_shoving + 0.027 * par_pct_mesh_cracks + -0.004 *par_pct_lt_cracks + 0.0414* par_pct_scabbing)"
+"pct_poth","-4.6702890145289899","1.5556185642162199","7.2015148834101202E-3","0.11969538044266299","0.265640960395091","4.9949630457231898E-3","-4.1036462867293701E-3","0","0","4.2827675502321201E-2","2.6036325346315201E-2","-6.0828017201478802E-3","6.0803615390132001E-2","0","logit(-4.6703 + 1.5556*f_is_seal + 0.0072 * par_surf_thick + 0.1197 * f_is_urban + 0.2656 * ln(par_adt) + 0.005 * heavy_perc + -0.0041 * par_pav_age + 0.0428 * par_pct_shoving + 0.026 * par_pct_mesh_cracks + -0.0061 *par_pct_lt_cracks + 0.0608* par_pct_scabbing)"
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,"Logit","Probability",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"pct_flush","-2.5845585635672907E-2","0.49353896324838609",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"pct_scabb","-2.4596130480853094E-2","0.49385127735920209",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"pct_lt_crax","-0.10881225640281822","0.47282374475723304",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"pct_allig","-0.42303086203252405","0.395791719427113",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"pct_shove","-1.0130535070511817","0.26638269986889196",NA,"7.3361730013110806",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"pct_poth","-0.46133823368500881","0.38666840568654648",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"distress","(Intercept)","surf_classseal","surf_thick","urban_ruralU","ln(adt)","heavy_perc","pave_age","pct_poth","pct_flush","pct_shove","pct_allig","pct_lt_crax","pct_scabb","rutting",NA
+"rutting","0.18340754511106","0.97512916005531103","-9.1335882748702201E-3","-0.87269729194442802","-0.14420428891736001","-9.63375501713927E-3","-5.3376328410859595E-4","1.25164580158092","4.9240242698693204E-3","2.6210836298259599E-2","7.8228741310984503E-3","-1.5567013294296699E-2","1.8132971423768601E-2","0",NA
+"naasra_85","-2.8042327080410701","1.05997712601908","1.92118616449969E-2","1.5259674531969201","-6.8267753169603707E-2","-3.1096556565190302E-2","8.6719981861213304E-3","0.109757074038129","1.57606548531052E-3","9.8819022405904205E-3","5.6522190256094703E-3","-6.4867984724282903E-3","-5.6074163981035601E-3","7.5300806141719204E-2",NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"rutting","logit(0.1834 + 0.9751*f_is_seal + -0.0091 * par_surf_thick + -0.8727 * f_is_urban + -0.1442 * ln(par_adt) + -0.0096 * heavy_perc + -0.0005 * par_pav_age + 1.2516 * par_pct_potholes + 0.0049 * par_pct_flushing + 0.0262 * par_pct_shoving + 0.0078 * par_pct_mesh_cracks + -0.0156 *par_pct_lt_cracks + 0.0181* par_pct_scabbing)",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"naasra_85","logit(-2.8042 + 1.06*f_is_seal + 0.0192 * par_surf_thick + 1.526 * f_is_urban + -0.0683 * ln(par_adt) + -0.0311 * heavy_perc + 0.0087 * par_pav_age + 0.1098 * par_pct_potholes + 0.0016 * par_pct_flushing + 0.0099 * par_pct_shoving + 0.0057 * par_pct_mesh_cracks + -0.0065 *par_pct_lt_cracks + -0.0056* par_pct_scabbing + 0.0753* par_rut)",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,"Logit","Probability",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"rutting","-1.1747110276223391","0.23600449978977123",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"naasra_85","-0.60637533968255319","0.35288647464895512",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,"0",NA,NA,"1","0",NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,"-5",NA,NA,"6.737946999085467E-3",NA,NA,NA,NA,NA,NA,NA

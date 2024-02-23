@@ -1,0 +1,10 @@
+﻿filter,function_type,function_key,setup_code,assign_to_key
+all,additive_equation,f_adt_nextvalue_reset,par_adt * 1plus(f_traff_growth),par_adt
+all,additive_equation,f_heavy_nextvalue_reset,par_heavy * 1plus(f_traff_growth),par_heavy
+all,concatenate,f_exp_life_code,urban_rural|pave_use|surf_material :  _,
+surface,lookup,f_exp_life_ac_init,surf_life_exp : f_exp_life_code : ac_undefined,
+surface,lookup,f_exp_life_seal_init,surf_life_exp : f_exp_life_code : seal_undefined,
+surface,if_else,f_surf_life_exp_initial,t: par_surf_class = seal ~ f_exp_life_seal_init ~ f_exp_life_ac_init,par_surf_exp_life
+all,constant,f_reset_surf_age,0,par_surf_age
+all,if_else,f_reset_pav_age,t : this_treatment_cat starts_with rehab ~ 0 ~eq(par_pav_age + 1),par_pav_age
+all,multiple_if,f_reset_surffunc,t :this_treatment_cat starts_with rehab | 1 ~ t: par_surf_func  = 1 |2  ~  t: par_surf_func  = 2|R  ~  t: par_surf_func  = R|R,par_surf_func

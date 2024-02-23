@@ -1,0 +1,18 @@
+﻿filter,function_type,function_key,setup_code,assign_to_key
+all,additive_equation,f_surf_life_ach,percent(par_surf_age*par_surf_exp_life^-1),par_surf_life_ach
+all,additive_equation,f_surf_life_remain,par_surf_exp_life + -1*par_surf_age,par_surf_remain_life
+all,value_copy,f_treatment_quantity,area_m2,
+all,concatenate,f_treatment_reason,pdi = | par_pdi | ; sdi = | par_sdi | ; age = | par_surf_age :  : 2,
+all,concatenate,f_treatment_comment,mesh_cracks = | par_mesh_cracks_pct | ; shoving = | par_shoving_pct | ; potholes = |par_potholes_pct :   : 2,
+all,cost354_index,f_cost354_reset_pdi,par_lt_cracks_pct|par_mesh_cracks_pct|par_shoving_pct|par_potholes_pct : 0.2|0.3|0.3|0.2 : 100 : 20,
+all,cost354_index,f_cost354_reset_sdi,par_flushing_pct|par_scabbing_pct|par_mesh_cracks_pct|par_potholes_pct : 0.2|0.3|0.3|0.2 : 100 : 21,
+all,weighted_sum,f_pdi_new,par_lt_cracks_pct|par_mesh_cracks_pct|par_shoving_pct|par_potholes_pct : 0.2|0.3|0.3|0.2,par_pdi
+all,weighted_sum,f_sdi_new,par_flushing_pct|par_scabbing_pct|par_mesh_cracks_pct|par_potholes_pct : 0.2|0.3|0.3|0.2,par_sdi
+all,weighted_sum,f_obj_new,par_pdi|par_sdi : 0.6|0.4,
+all,additive_equation,f_obj_fin_by_area,f_obj_new*f_treatment_quantity,par_obj
+all,piecewise_linear_function,f_sdi_score_seal,"par_sdi : 1,0 | 4,10 | 50,50 | 60,80 | 100,100 : false",
+all,piecewise_linear_function,f_pdi_score_seal,"par_pdi : 0,0 | 2,100 | 10,0 | 20,-100 : true",
+all,additive_equation,f_resurf_score,f_sdi_score_seal + f_pdi_score_seal,
+all,piecewise_linear_function,f_rehab_score,"par_pdi : 10,0 | 20,1 | 30,30 | 80, 50 | 100,100 : false",
+all,constant,fb_tss_secondcoat,100,
+all,constant,fb_tss_routmaint,100,

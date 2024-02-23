@@ -1,0 +1,5 @@
+﻿filter,function_type,function_key,setup_code,assign_to_key,comment
+survey,date_to_age,f_cond_surv_age,cond_survey_date:yyyy-mm-dd : 1 : 2023-12-28 : years,,
+survey,equality,f_is_cond_surv_outdated,n: par_surf_age < f_cond_surv_age : FALSE : TRUE,,
+survey,date_to_age,f_hsd_age,hsd_date:yyyy-mm-dd : 1 : 2023-12-28 : years,,
+survey,equality,f_is_hsd_outdated,n: par_surf_age < f_hsd_age : FALSE : TRUE,,

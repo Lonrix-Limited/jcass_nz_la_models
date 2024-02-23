@@ -1,0 +1,11 @@
+﻿filter,function_type,function_key,setup_code,assign_to_key,comment
+surface,value_copy,f_surf_mat,surf_material,par_surf_mat,
+surface,value_copy,f_surf_class,surf_class,par_surf_class,
+surface,value_copy,f_surf_thick,surf_thick,par_surf_thick,
+surface,value_copy,f_surf_layers,surf_layer_no,par_surf_layers,
+surface,value_copy,f_surf_func,surf_function,par_surf_func,
+surface,date_to_age,f_surf_age,surf_date:yyyy-mm-dd:1: 2023-12-28 : years,par_surf_age,
+surface,concatenate,f_exp_life_code,urban_rural|pave_use|surf_material :  _,,
+surface,lookup,f_exp_life_ac_init,surf_life_exp : f_exp_life_code : ac_undefined,,
+surface,lookup,f_exp_life_seal_init,surf_life_exp : f_exp_life_code : seal_undefined,,
+surface,if_else,f_surf_life_exp_initial,t: par_surf_class = seal ~ f_exp_life_seal_init ~ f_exp_life_ac_init,par_surf_exp_life,

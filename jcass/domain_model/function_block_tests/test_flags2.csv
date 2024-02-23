@@ -1,0 +1,11 @@
+﻿parameter,value,expected
+urban_rural,R,
+par_surf_class,ac,
+is_rehab_route,FALSE,
+next_surf,seal,
+f_is_urban,,0
+f_is_seal,,0
+f_is_rehab_route,,0
+f_ac_ok,,0
+par_is_rehab_route,,0
+par_ac_ok,,0

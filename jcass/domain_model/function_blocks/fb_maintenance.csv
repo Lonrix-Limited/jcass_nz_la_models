@@ -1,0 +1,12 @@
+﻿filter,function_type,function_key,setup_code,assign_to_key
+maintenance,additive_equation,f_iri,0.047943 + par_naasra*0.03775,
+maintenance,additive_equation,f_shoving_per_km_raw,10 * par_shoving_pct,
+maintenance,additive_equation,f_mesh_per_km_raw,10*par_mesh_cracks_pct,
+maintenance,additive_equation,f_poth_per_km_raw,40*par_potholes_pct,
+maintenance,max,f_shoving_per_km,0.001 | f_shoving_per_km_raw : TRUE : -1,
+maintenance,max,f_mesh_per_km,0.001 | f_mesh_per_km_raw : TRUE : -1,
+maintenance,max,f_poth_per_km,0.001 | f_poth_per_km_raw : TRUE : -1,
+maintenance,additive_equation,f_maint_pred,0.405*f_iri + 0.055 * ln(f_shoving_per_km) + 0.048*ln(f_mesh_per_km) + 0.243*ln(par_adt) + 0.644*ln(par_rut) + 0.01*par_pav_age + 0.03 * ln(f_poth_per_km) + 5.211,
+maintenance,additive_equation,f_maint_cost,exp(f_maint_pred),par_maint_cost
+maintenance,additive_equation,f_maint_qty,0.02*f_maint_cost,
+maintenance,if_else,f_maint_trigg,n: f_maint_qty > 0 ~ 1 ~ 0,

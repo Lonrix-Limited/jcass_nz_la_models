@@ -1,0 +1,4 @@
+﻿parameter,value,expected
+par_cond,7.7,
+par_test,,4.94038712
+f_is_failed,,1

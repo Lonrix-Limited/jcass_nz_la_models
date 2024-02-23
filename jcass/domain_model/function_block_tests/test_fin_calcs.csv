@@ -1,0 +1,15 @@
+"parameter","value","expected"
+"par_surf_age",7.2,NA
+"par_surf_exp_life",10,NA
+"area_m2",123.456,NA
+"par_flushing_pct",1,NA
+"par_scabbing_pct",2,NA
+"par_lt_cracks_pct",5.5,NA
+"par_mesh_cracks_pct",18.7,NA
+"par_shoving_pct",7.7,NA
+"par_potholes_pct",0.67,NA
+"par_surf_life_ach",NA,72
+"par_surf_remain_life",NA,2.8
+"par_pdi",NA,19.4875555555556
+"par_sdi",NA,18.9075555555556
+"par_obj",NA,19.2555555555556

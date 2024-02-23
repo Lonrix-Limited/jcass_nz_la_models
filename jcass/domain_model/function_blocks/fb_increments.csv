@@ -1,0 +1,21 @@
+﻿filter,function_type,function_key,setup_code,assign_to_key
+all,additive_equation,f_surf_age_nextvalue_increm,par_surf_age + 1,par_surf_age
+all,additive_equation,f_pav_age_nextvalue_increm,par_pav_age + 1,par_pav_age
+all,additive_equation,f_adt_nextvalue_increm,par_adt * 1plus(f_traff_growth),par_adt
+all,additive_equation,f_heavy_nextvalue_increm,par_heavy * 1plus(f_traff_growth),par_heavy
+all,s_progression,f_flush_increm,par_flushing_aadi : par_flushing_init : par_flushing_t100 : par_surf_age,
+all,additive_equation,f_flush_nextvalue,f_flush_increm + par_flushing_pct,par_flushing_pct
+all,s_progression,f_scabb_increm,par_scabbing_aadi : par_scabbing_init : par_scabbing_t100 : par_surf_age,
+all,additive_equation,f_scabb_nextvalue,f_scabb_increm + par_scabbing_pct,par_scabbing_pct
+all,s_progression,f_lt_cracks_increm,par_lt_cracks_aadi : par_lt_cracks_init : par_lt_cracks_t100 : par_surf_age,
+all,additive_equation,f_lt_cracks_nextvalue,f_lt_cracks_increm + par_lt_cracks_pct,par_lt_cracks_pct
+all,s_progression,f_mesh_cracks_increm,par_mesh_cracks_aadi : par_mesh_cracks_init : par_mesh_cracks_t100 : par_surf_age,
+all,additive_equation,f_mesh_cracks_nextvalue,f_mesh_cracks_increm + par_mesh_cracks_pct,par_mesh_cracks_pct
+all,s_progression,f_shove_increm,par_shove_aadi : par_shove_init : par_shove_t100 : par_surf_age,
+all,additive_equation,f_shove_nextvalue,f_shove_increm + par_shoving_pct,par_shoving_pct
+all,s_progression,f_poth_increm,par_poth_aadi : par_poth_init : par_poth_t100 : par_surf_age,
+all,additive_equation,f_poth_nextvalue,f_poth_increm + par_potholes_pct,par_potholes_pct
+all,inverse_distribution,f_rut_increm,a : 0.2 : f_rut_proba,
+all,additive_equation,f_rut_nextvalue,f_rut_increm + par_rut,par_rut
+all,inverse_distribution,f_naasra_increm,a : 2.5 : f_naasra_proba,
+all,additive_equation,f_naasra_nextvalue,f_naasra_increm + par_naasra,par_naasra

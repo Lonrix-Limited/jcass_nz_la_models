@@ -1,0 +1,7 @@
+﻿filter,function_type,function_key,setup_code,assign_to_key,comments
+all,additive_equation,f_flush_t100_exp,f_flush_t100_max * 1min(f_flush_probability),,
+all,additive_equation,f_scabb_t100_exp,f_scabb_t100_max * 1min(f_scabb_probability),,
+all,additive_equation,f_lt_cracks_t100_exp,f_lt_cracks_t100_max * 1min(f_lt_cracks_probability),,
+all,additive_equation,f_mesh_cracks_t100_exp,f_mesh_cracks_t100_max * 1min(f_mesh_cracks_probability),,
+all,additive_equation,f_shove_t100_exp,f_shove_t100_max * 1min(f_shove_probability),,
+all,additive_equation,f_poth_t100_exp,f_poth_t100_max * 1min(f_poth_probability),,

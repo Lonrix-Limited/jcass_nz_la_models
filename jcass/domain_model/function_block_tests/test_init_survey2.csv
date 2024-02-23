@@ -1,0 +1,8 @@
+"parameter","value","expected"
+"cond_survey_date","2022-06-05",NA
+"par_surf_age","0.9",NA
+"hsd_date","2023-08-20",NA
+"f_cond_surv_age",NA,1.59890485968515
+"f_hsd_age",NA,0.39151266255989
+"f_is_hsd_outdated",NA,0
+"f_is_cond_surv_outdated",NA,1

@@ -1,0 +1,11 @@
+﻿filter,function_type,function_key,setup_code,assign_to_key,comment
+all,value_copy,f_pre_reset_lt_cracks,par_lt_cracks_pct,,keep value for resets to determine new aadi
+all,value_copy,f_pre_reset_mesh_cracks,par_mesh_cracks_pct,,keep value for resets to determine new aadi
+all,value_copy,f_pre_reset_shoving,par_shoving_pct,,keep value for resets to determine new aadi
+all,value_copy,f_pre_reset_potholes,par_potholes_pct,,keep value for resets to determine new aadi
+all,constant,f_reset_flushing,0,par_flushing_pct,reset value initially
+all,constant,f_reset_scabbing,0,par_scabbing_pct,reset value initially
+all,constant,f_reset_lt_cracks,0,par_lt_cracks_pct,reset value initially
+all,constant,f_reset_mesh_cracks,0,par_mesh_cracks_pct,reset value initially
+all,constant,f_reset_shoving,0,par_shoving_pct,reset value initially
+all,constant,f_reset_potholes,0,par_potholes_pct,reset value initially

@@ -1,0 +1,5 @@
+﻿filter,function_type,function_key,setup_code,assign_to_key,comment
+situation,equality,f_is_urban,t:urban_rural = U,,Flag to indicate if the road is Urban (U) or Rural (R)
+all,equality,f_is_seal,t:par_surf_class = seal,,Flag to indicate if the current surfacing is a Seal
+general,equality,f_is_rehab_route,t: is_rehab_route = TRUE,par_is_rehab_route,Flag to indicate if the element is considered a Rehab Route (based on client policy)
+general,equality,f_ac_ok,t: next_surf = ac,par_ac_ok,Flag to indicate if an asphalt can be considered as a next surface (based on client policy)

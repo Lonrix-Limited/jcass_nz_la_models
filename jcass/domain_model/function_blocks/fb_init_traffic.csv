@@ -1,0 +1,4 @@
+﻿filter,function_type,function_key,setup_code,assign_to_key,comment
+traffic,max,f_adt,adt | 1 : FALSE: 10,par_adt,
+traffic,additive_equation,f_heavy_veh_frac,heavy_perc*100^-1,,
+traffic,additive_equation,f_heavy_veh,f_adt*f_heavy_veh_frac,par_heavy,

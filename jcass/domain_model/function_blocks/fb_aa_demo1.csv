@@ -1,0 +1,5 @@
+﻿filter,function_type,function_key,setup_code,assign_to_key,comment
+situation,constant,f_k0,0.21,,
+all,constant,f_k1,0.5,,
+general,additive_equation,f_param1,exp(f_k0 + f_k1*par_cond^0.5),par_test,
+general,equality,f_is_failed,n: f_param1 > 2,,
